@@ -3,10 +3,10 @@ import joblib
 import os
 
 st.write("Root files:", os.listdir())
-st.write("Model files:", os.listdir("model"))
+st.write("Model files:", os.listdir("Model"))
 
-model = joblib.load("model/house_price_lr_model.pkl")
-features = joblib.load("model/model_features.pkl")
+model = joblib.load("Model/house_price_lr_model.pkl")
+features = joblib.load("Model/model_features.pkl")
 
 
 st.set_page_config(page_title="House Price Predictor", layout="centered")
