@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-with open(r"Model\house_price_lr_model.pkl", "rb") as f:
+with open("Model/house_price_lr_model.pkl", "rb") as f:
     model = pickle.load(f)
 
-with open(r"Model\model_features.pkl", "rb") as f:
+with open("Model/model_features.pkl", "rb") as f:
     features = pickle.load(f)
 
 st.set_page_config(page_title="House Price Predictor", layout="centered")
