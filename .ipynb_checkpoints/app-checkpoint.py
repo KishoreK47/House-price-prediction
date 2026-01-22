@@ -1,10 +1,13 @@
 import streamlit as st
-import pandas as pd
 import joblib
+import os
 
-# Load model and features
-model = joblib.load(r"C:\Users\kisho\Downloads\Clinch_mini_project\House_project\Model\house_price_lr_model.pkl")
-features = joblib.load(r"C:\Users\kisho\Downloads\Clinch_mini_project\House_project\Model\model_features.pkl")
+st.write("Root files:", os.listdir())
+st.write("Model files:", os.listdir("model"))
+
+model = joblib.load("model/house_price_lr_model.pkl")
+features = joblib.load("model/model_features.pkl")
+
 
 st.set_page_config(page_title="House Price Predictor", layout="centered")
 

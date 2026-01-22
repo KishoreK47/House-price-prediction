@@ -1,12 +1,13 @@
 import streamlit as st
-import pandas as pd
-import pickle
+import joblib
+import os
 
-with open("Model/house_price_lr_model.pkl", "rb") as f:
-    model = pickle.load(f)
+st.write("Root files:", os.listdir())
+st.write("Model files:", os.listdir("model"))
 
-with open("Model/model_features.pkl", "rb") as f:
-    features = pickle.load(f)
+model = joblib.load("model/house_price_lr_model.pkl")
+features = joblib.load("model/model_features.pkl")
+
 
 st.set_page_config(page_title="House Price Predictor", layout="centered")
 
