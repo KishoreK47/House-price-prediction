@@ -3,9 +3,6 @@ import joblib
 import os
 import pandas as pd
 
-st.write("Root files:", os.listdir())
-st.write("Model files:", os.listdir("Model"))
-
 model = joblib.load("Model/house_price_lr_model.pkl")
 features = joblib.load("Model/model_features.pkl")
 
